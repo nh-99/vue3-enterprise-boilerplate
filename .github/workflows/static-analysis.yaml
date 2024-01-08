@@ -58,5 +58,9 @@ jobs:
       - name: Run unit test
         run: pnpm run test:unit
 
+      - name: Build
+        # This has to be run before e2e test
+        run: pnpm run build
+
       - name: Run e2e test
         run: pnpm run test:e2e
