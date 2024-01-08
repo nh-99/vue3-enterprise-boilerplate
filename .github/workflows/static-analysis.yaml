@@ -62,5 +62,8 @@ jobs:
         # This has to be run before e2e test
         run: pnpm run build
 
+      - name: Setup playwright
+        run: pnpm exec playwright install
+
       - name: Run e2e test
         run: pnpm run test:e2e
