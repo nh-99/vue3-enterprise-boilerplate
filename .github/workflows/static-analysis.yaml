@@ -47,7 +47,7 @@ jobs:
             ${{ runner.os }}-pnpm-store-
 
       - name: Install dependencies
-        run: pnpm i
+        run: pnpm ci
 
       - name: Run lint
         run: pnpm run lint
@@ -63,7 +63,7 @@ jobs:
         run: pnpm run build
 
       - name: Setup playwright
-        run: pnpm exec playwright install
+        run: pnpm exec playwright install --with-deps
 
       - name: Run e2e test
         run: pnpm run test:e2e
