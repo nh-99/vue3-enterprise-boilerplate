@@ -1,10 +1,14 @@
+<script setup lang="ts">
+import Layout from '../layouts/MainLayout.vue'
+</script>
+
 <template>
-  <div class="about">
+  <Layout :class="$style.about">
     <h1>This is an about page</h1>
-  </div>
+  </Layout>
 </template>
 
-<style>
+<style lang="scss" module>
 @media (min-width: 1024px) {
   .about {
     min-height: 100vh;
