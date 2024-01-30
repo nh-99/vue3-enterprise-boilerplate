@@ -4,6 +4,7 @@ import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 
 import App from './App.vue'
+import loadComponents from '@/components/_globals'
 import router from './router'
 
 async function enableMocking() {
@@ -19,6 +20,9 @@ async function enableMocking() {
 }
 
 const app = createApp(App)
+
+// Load the `_base-*.vue` components globally.
+loadComponents(app)
 
 app.use(createPinia())
 app.use(router)

@@ -1,5 +1,5 @@
 // stores/counter.spec.ts
-import { beforeEach, describe, expect, it, vi } from 'vitest'
+import { beforeEach, describe, expect, it } from 'vitest'
 import { setActivePinia, createPinia } from 'pinia'
 import { useCounterStore } from './counter'
 

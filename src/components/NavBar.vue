@@ -1,4 +1,5 @@
-<script lang="ts" setup>
+<script setup lang="ts">
+import { RouterLink } from 'vue-router'
 import routes from '@/router/routes'
 
 const displayableRoutes = routes.filter((route) => route.meta?.navbarDisplay !== null)
@@ -6,6 +7,7 @@ const displayableRoutes = routes.filter((route) => route.meta?.navbarDisplay !==
 
 <template>
   <ul :class="$style.navList">
+    <li>Vue Enterprise Boilerplate</li>
     <li :class="$style.navListItem">
       <RouterLink
         :to="{ name: routerLink.name }"

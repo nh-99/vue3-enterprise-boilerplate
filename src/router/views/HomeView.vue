@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import Layout from '../layouts/MainLayout.vue'
+import MainLayout from '@/router/layouts/MainLayout.vue'
 </script>
 
 <template>
-  <Layout>
+  <MainLayout>
     <p>Welcome!</p>
-  </Layout>
+  </MainLayout>
 </template>

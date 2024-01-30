@@ -1,9 +1,9 @@
-// stores/counter.spec.ts
-import { beforeEach, describe, expect, it, vi } from 'vitest'
+// stores/message.spec.ts
+import { beforeEach, describe, expect, it } from 'vitest'
 import { setActivePinia, createPinia } from 'pinia'
 import { useMessageStore } from './message'
 
-describe('Counter Store', () => {
+describe('Message Store', () => {
   beforeEach(() => {
     // creates a fresh pinia and makes it active
     // so it's automatically picked up by any useStore() call
@@ -14,7 +14,8 @@ describe('Counter Store', () => {
   it('sets from api', () => {
     const messageStore = useMessageStore()
     expect(messageStore.messageData).toBeUndefined()
-    messageStore.message
-    expect(messageStore.messageData).toBe('Hello, World from msw!')
+    messageStore.message().then(() => {
+      expect(messageStore.messageData).toBe('Hello World, from msw + Vue 3 Enterprise Boilerplate!')
+    })
   })
 })

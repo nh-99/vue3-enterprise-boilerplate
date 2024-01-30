@@ -3,9 +3,11 @@ import NavBar from '@/components/NavBar.vue'
 </script>
 
 <template>
-  <NavBar />
-  <div :class="$style.container">
-    <slot></slot>
+  <div>
+    <NavBar />
+    <div :class="$style.container">
+      <slot></slot>
+    </div>
   </div>
 </template>
 

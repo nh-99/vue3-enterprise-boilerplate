@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import Layout from '../layouts/MainLayout.vue'
+import MainLayout from '../layouts/MainLayout.vue'
 </script>
 
 <template>
-  <Layout :class="$style.about">
+  <MainLayout :class="$style.about">
     <h1>This is an about page</h1>
-  </Layout>
+  </MainLayout>
 </template>
 
 <style lang="scss" module>
