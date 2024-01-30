@@ -5,5 +5,7 @@ import { test, expect } from '@playwright/test'
 test('visits the app root url', async ({ page }) => {
   await page.goto('/')
   await expect(page.locator('div > p')).toHaveText('Welcome!')
-  await expect(page.locator('div.greetings > h1')).toHaveText('Hello World, from msw!')
+  await expect(page.locator('div.greetings > h1')).toHaveText(
+    'Hello World, from msw + Vue 3 Enterprise Boilerplate!'
+  )
 })
