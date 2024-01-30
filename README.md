@@ -1,5 +1,7 @@
 # Vue Enterprise Boilerplate (forked)
 
+![static-analysis-workflow](https://github.com/nh-99/vue3-enterprise-boilerplate/actions/workflows/static-analysis.yaml/badge.svg)
+
 This is an ever-evolving, very opinionated architecture and dev environment for new Vue SPA projects using [Vite](https://vitejs.dev/). Questions, feedback, and for now, even bikeshedding are welcome. 😄
 
 > A big thanks to [Chris Fritz](https://www.patreon.com/chrisvuefritz) for the incredible work that he did to make this resource possible.
