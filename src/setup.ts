@@ -1,6 +1,7 @@
 import { afterAll, afterEach, beforeAll } from 'vitest'
 import { server } from '../src/mocks/server'
 import { config } from '@vue/test-utils'
+import 'cross-fetch/polyfill'
 import MainLayout from '@/router/layouts/MainLayout.vue'
 
 beforeAll(() => server.listen())
