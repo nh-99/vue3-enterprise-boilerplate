@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
-import { onMounted, ref } from 'vue'
+import { onMounted } from 'vue'
 import { useMessageStore } from '@/stores/message'
 import { storeToRefs } from 'pinia'
 

@@ -55,9 +55,6 @@ jobs:
       - name: Run type check
         run: pnpm run type-check
 
-      - name: Run unit test
-        run: pnpm run test:unit
-
       - name: Build
         # This has to be run before e2e test
         run: pnpm run build
@@ -65,5 +62,5 @@ jobs:
       - name: Setup playwright
         run: pnpm exec playwright install --with-deps
 
-      - name: Run e2e test
-        run: pnpm run test:e2e
+      - name: Run all CI tests
+        run: pnpm run test:ci
