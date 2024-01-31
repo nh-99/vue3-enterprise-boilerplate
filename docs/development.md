@@ -40,10 +40,6 @@ pnpm run dev
 # Launch the dev server and automatically open it in
 # your default browser when ready
 pnpm run dev --open
-
-# Launch the dev server with the Cypress client for
-# test-driven development in a friendly interface
-pnpm run dev:e2e
 ```
 
 ### Developing with the production API
@@ -64,25 +60,22 @@ This project includes generators to speed up common development tasks. Commands 
 
 ```bash
 # Generate a new component with adjacent unit test
-pnpm run new component
+pnpm run generate:component
 
 # Generate a new view component with adjacent unit test
-pnpm run new view
+pnpm run generate:view
 
 # Generate a new layout component with adjacent unit test
-pnpm run new layout
+pnpm run generate:layout
 
 # Generate a new Pinia store with adjacent unit test
-pnpm run new store
+pnpm run generate:store
 
-# Generate a new utility function with adjacent unit test
-pnpm run new util
-
-# Generate a new end-to-end test
-pnpm run new e2e
+# Generate a new TypeScript type file with adjacent unit test
+pnpm run generate:type
 ```
 
-Update existing or create new generators in the `generators` folder, with help from the [plop docs](https://plopjs.com/documentation/#getting-started).
+Update existing or create new generators in the `_generators` folder, with help from the [plop docs](https://plopjs.com/documentation/#getting-started).
 
 ## Aliases
 

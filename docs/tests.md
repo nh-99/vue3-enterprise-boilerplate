@@ -8,9 +8,9 @@
     - [Unit test files](#unit-test-files)
     - [Unit test helpers](#unit-test-helpers)
     - [Unit test mocks](#unit-test-mocks)
-  - [End-to-end tests with Cypress](#end-to-end-tests-with-cypress)
+  - [End-to-end tests with Playwright](#end-to-end-tests-with-playwright)
     - [Running end-to-end tests](#running-end-to-end-tests)
-    - [Introduction to Cypress](#introduction-to-cypress)
+    - [Introduction to Playwright](#introduction-to-playwright)
     - [Accessibility-driven end-to-end tests](#accessibility-driven-end-to-end-tests)
   - [The mock API](#the-mock-api)
     - [Mock authentication](#mock-authentication)
@@ -68,7 +68,7 @@ To get started with Playwright, run:
 # Install dependencies
 pnpm exec playwright install
 # Run the test server
-pnmm run test:e2e
+pnpm run test:e2e
 ```
 
 ### Accessibility-driven end-to-end tests

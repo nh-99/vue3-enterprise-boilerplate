@@ -1,0 +1,20 @@
+import { ref } from 'vue'
+import { defineStore } from 'pinia'
+import axios from 'axios'
+
+export const use{{properCase name}}Store = defineStore('{{name}}', () => {
+  const {{name}}Data = ref()
+
+  const {{name}} = () => {
+    return axios.get('/api/v1/{{name}}').then((res) => {
+      {{name}}Data.value = res.data
+    }).catch((err) => {
+      console.error(err)
+      alert(err)
+
+      return false
+    })
+  }
+
+  return { {{name}}Data, {{name}} }
+})

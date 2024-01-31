@@ -1,14 +1,20 @@
 import { ref } from 'vue'
 import { defineStore } from 'pinia'
-import { fetchMessage } from '@/services/fetchers'
+import type { Message } from '@/types/message'
+import axios from 'axios'
 
 export const useMessageStore = defineStore('message', () => {
   const messageData = ref()
 
   const message = () => {
-    return fetchMessage().then((msg) => {
-      messageData.value = msg
-    })
+    return axios
+      .get('/api/v1/message')
+      .then((response) => {
+        messageData.value = response.data.message as Message
+      })
+      .catch((error) => {
+        console.error(error)
+      })
   }
 
   return { messageData, message }

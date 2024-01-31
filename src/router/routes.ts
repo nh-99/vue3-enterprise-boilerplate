@@ -31,4 +31,5 @@ export default [
       }
     }
   }
+  // PLOP: ROUTE - DO NOT REMOVE COMMENT
 ]

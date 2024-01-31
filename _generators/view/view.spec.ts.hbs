@@ -1,17 +1,17 @@
 import { describe, it, expect } from 'vitest'
 
 import { config, shallowMount } from '@vue/test-utils'
-import HomeView from './HomeView.vue'
+import {{name}} from './{{name}}.vue'
 import MainLayout from '@/router/layouts/MainLayout.vue'
 
 config.global.stubs = {
   MainLayout
 }
 
-describe('HomeView', () => {
+describe('{{name}}', () => {
   it('renders properly', () => {
-    const wrapper = shallowMount(HomeView)
-    // Assert that the text contains "Welcome!"
-    expect(wrapper.text()).toContain('Welcome!')
+    const wrapper = shallowMount({{name}})
+    // Assert that the text contains "{{name}}"
+    expect(wrapper.text()).toContain('{{name}}')
   })
 })

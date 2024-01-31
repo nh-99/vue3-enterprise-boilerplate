@@ -1,0 +1,23 @@
+// stores/{{name}}.spec.ts
+import { beforeEach, describe, expect, it } from 'vitest'
+import { setActivePinia, createPinia } from 'pinia'
+import { use{{properCase name}}Store } from './{{name}}'
+
+describe('{{properCase name}} Store', () => {
+  beforeEach(() => {
+    // creates a fresh pinia and makes it active
+    // so it's automatically picked up by any useStore() call
+    // without having to pass it to it: `useStore(pinia)`
+    setActivePinia(createPinia())
+  })
+
+  it('sets from api', () => {
+    const {{name}}Store = use{{properCase name}}Store()
+    expect({{name}}Store.{{name}}Data).toBeUndefined()
+    {{name}}Store.{{name}}().then(() => {
+      expect({{name}}Store.{{name}}Data.message).toBe(
+        'Hello World, from msw + Vue 3 Enterprise Boilerplate!'
+      )
+    })
+  })
+})
