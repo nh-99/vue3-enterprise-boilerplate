@@ -35,7 +35,7 @@ devDependencies:
     specifier: ^21.1.6
     version: 21.1.6
   '@types/node':
-    specifier: ^18.19.3
+    specifier: ^18.19.5
     version: 18.19.5
   '@vitejs/plugin-vue':
     specifier: ^4.5.2
