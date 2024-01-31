@@ -41,13 +41,12 @@ For unit tests, we use Vitest with the `describe`/`expect` syntax. If you're not
 
 Then at the very least, read about:
 
-- [Vitest's matchers](https://facebook.github.io/jest/docs/en/expect.html) for examples of other assertions you can make
-- [Testing async code](https://facebook.github.io/jest/docs/en/asynchronous.html)
-- [Setup and teardown](https://facebook.github.io/jest/docs/en/setup-teardown.html)
+- [Vitest's expects](https://vitest.dev/api/expect) for examples of other assertions you can make
+- [Setup and teardown](https://vitest.dev/api/#setup-and-teardown)
 
 ### Unit test files
 
-Configuration for Jest is in `vitest.config.js`, and the tests are first-class citizens. That means they live alongside our source files, using the same name as the file they test, but with the extension `.spec.ts`.
+Configuration for Vite is in `vitest.config.js`, and the tests are first-class citizens. That means they live alongside our source files, using the same name as the file they test, but with the extension `.spec.ts`.
 
 This may seem strange at first, but it makes poor test coverage obvious from a glance, even for those less familiar with the project. It also lowers the barrier to adding tests before creating a new file, adding a new feature, or fixing a bug.
 

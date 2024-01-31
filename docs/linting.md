@@ -13,10 +13,6 @@ This project uses ESLint, Stylelint, Markdownlint, and Prettier to catch errors 
 
 - **TypeScript** is linted by ESLint and formatted by Prettier
 - **HTML** (in templates and JSX) is linted by ESLint
-- **CSS** is linted by Stylelint and formatted by Prettier
-- **Markdown** is linted by Markdownlint and formatted by Prettier
-- **JSON** is formatted by Prettier
-- **Images** are minified by `imagemin-lint-staged` (only on pre-commit)
 
 ## Scripts
 

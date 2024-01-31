@@ -41,7 +41,6 @@ rm _start.js
 This project includes a `docs` folder with more details on:
 
 1.  [Setup and development](docs/development.md)
-1.  [Architecture](docs/architecture.md)
 1.  [Dependency/technology breakdown](docs/dependencies.md)
 1.  [Routing, layouts, and views](docs/routing.md)
 1.  [Pinia for state management](https://pinia.vuejs.org/)
