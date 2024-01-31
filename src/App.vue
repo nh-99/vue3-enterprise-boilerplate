@@ -1,17 +1,15 @@
 <script setup lang="ts">
 import { RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
-import { fetchMessage } from '@/services/fetchers'
 import { onMounted, ref } from 'vue'
+import { useMessageStore } from '@/stores/message'
+import { storeToRefs } from 'pinia'
 
-const message = ref('')
+const messageStore = useMessageStore()
+const { messageData } = storeToRefs(messageStore)
 
 onMounted(async () => {
-  try {
-    message.value = await fetchMessage()
-  } catch (error) {
-    message.value = 'server error :('
-  }
+  await messageStore.fetchMessage()
 })
 </script>
 
@@ -20,7 +18,7 @@ onMounted(async () => {
     <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
 
     <div class="wrapper">
-      <HelloWorld :msg="message" />
+      <HelloWorld :msg="messageData" />
     </div>
   </header>
 

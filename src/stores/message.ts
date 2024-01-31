@@ -6,7 +6,7 @@ import axios from 'axios'
 export const useMessageStore = defineStore('message', () => {
   const messageData = ref()
 
-  const message = () => {
+  const fetchMessage = () => {
     return axios
       .get('/api/v1/message')
       .then((response) => {
@@ -17,5 +17,5 @@ export const useMessageStore = defineStore('message', () => {
       })
   }
 
-  return { messageData, message }
+  return { messageData, fetchMessage }
 })

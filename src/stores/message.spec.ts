@@ -14,7 +14,7 @@ describe('Message Store', () => {
   it('sets from api', () => {
     const messageStore = useMessageStore()
     expect(messageStore.messageData).toBeUndefined()
-    messageStore.message().then(() => {
+    messageStore.fetchMessage().then(() => {
       expect(messageStore.messageData).toBe('Hello World, from msw + Vue 3 Enterprise Boilerplate!')
     })
   })
