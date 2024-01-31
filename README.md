@@ -1,4 +1,5 @@
-# Vue Enterprise Boilerplate (forked)
+# Vue 3 Enterprise Boilerplate (forked)
+> Re-built for Vue 3 and TypeScript
 
 ![static-analysis-workflow](https://github.com/nh-99/vue3-enterprise-boilerplate/actions/workflows/static-analysis.yaml/badge.svg)
 
