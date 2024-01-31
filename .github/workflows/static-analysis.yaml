@@ -27,7 +27,19 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
+      # Install pnpm for either Act (https://github.com/nektos/act) or Github Actions
+      - name: Setup PNPM for Act
+        if: ${{ env.ACT }}
+        run: |
+          npm i -g pnpm
+          pnpm setup
+          source /root/.bashrc
+          echo "PATH=$PATH" >> $GITHUB_ENV
+          echo "PNPM_HOME=$PNPM_HOME" >> $GITHUB_ENV
+        env:
+          SHELL: bash
       - uses: pnpm/action-setup@v2
+        if: ${{ !env.ACT }}
         name: Install pnpm
         with:
           version: 8
@@ -55,6 +67,9 @@ jobs:
       - name: Run type check
         run: pnpm run type-check
 
+      - name: Run all unit tests
+        run: pnpm run test:unit:ci
+
       - name: Build
         # This has to be run before e2e test
         run: pnpm run build
@@ -62,5 +77,5 @@ jobs:
       - name: Setup playwright
         run: pnpm exec playwright install --with-deps
 
-      - name: Run all CI tests
-        run: pnpm run test:ci
+      - name: Run all e2e tests
+        run: pnpm run test:e2e

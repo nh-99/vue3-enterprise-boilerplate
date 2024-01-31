@@ -70,6 +70,9 @@ devDependencies:
   npm-run-all2:
     specifier: ^6.1.1
     version: 6.1.1
+  playwright-msw:
+    specifier: ^3.0.1
+    version: 3.0.1(@playwright/test@1.40.1)(msw@2.1.5)
   plop:
     specifier: ^4.0.1
     version: 4.0.1
@@ -3396,6 +3399,19 @@ packages:
     resolution: {integrity: sha512-+hkOycxPiV534c4HhpfX6yrlawqVUzITRKwHAmYfmsVreltEl6fAZJ3DPfLMOODw0H3s1Itd6MDCWmP1fl/QvQ==}
     engines: {node: '>=16'}
     hasBin: true
+    dev: true
+
+  /playwright-msw@3.0.1(@playwright/test@1.40.1)(msw@2.1.5):
+    resolution: {integrity: sha512-w2bVjt7kPIThOQF9OS/1vDDs0HsQfV9inxMVSUv74x/zhCcrgzVN47xpPk84okf3OcCRHHBJKq8sNeBfCDyhMg==}
+    engines: {node: '>=18'}
+    peerDependencies:
+      '@playwright/test': '>=1.20.0'
+      msw: ^2.0.0
+    dependencies:
+      '@mswjs/cookies': 1.1.0
+      '@playwright/test': 1.40.1
+      msw: 2.1.5(typescript@5.3.3)
+      strict-event-emitter: 0.5.1
     dev: true
 
   /playwright@1.40.1:
