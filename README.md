@@ -24,7 +24,7 @@ git clone https://github.com/nh-99/vue-enterprise-boilerplate.git my-new-project
 cd my-new-project
 
 # 3. Install dependencies. Make sure pnpm is installed: https://pnpm.io
-pnpm run install
+pnpm install
 
 # 4. Replace this README's CI badge with a note about when you started
 # and a link to a compare URL, so that you can always get an overview
