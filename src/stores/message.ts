@@ -6,15 +6,14 @@ import axios from 'axios'
 export const useMessageStore = defineStore('message', () => {
   const messageData = ref()
 
-  const fetchMessage = () => {
-    return axios
-      .get('/api/v1/message')
-      .then((response) => {
-        messageData.value = response.data.message as Message
-      })
-      .catch((error) => {
-        console.error(error)
-      })
+  const fetchMessage = async () => {
+    try {
+      const response = await axios.get('/api/v1/message')
+      messageData.value = response.data.message as Message
+    } catch (error) {
+      console.log('uh oh!')
+      console.error(error)
+    }
   }
 
   return { messageData, fetchMessage }

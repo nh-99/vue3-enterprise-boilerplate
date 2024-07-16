@@ -10,22 +10,22 @@ afterAll(() => server.close())
 // ===
 // Mock window properties not handled by jsdom
 // ===
-Object.defineProperty(window, 'localStorage', {
-  value: () => {
-    let store = {} as Record<string, string>
-    return {
-      getItem: function (key: string) {
-        return store[key] || null
-      },
-      setItem: function (key: string, value: string) {
-        store[key] = value.toString()
-      },
-      clear: function () {
-        store = {}
-      }
-    }
-  }
-})
+// Object.defineProperty(window, 'localStorage', {
+//   value: () => {
+//     let store = {} as Record<string, string>
+//     return {
+//       getItem: function (key: string) {
+//         return store[key] || null
+//       },
+//       setItem: function (key: string, value: string) {
+//         store[key] = value.toString()
+//       },
+//       clear: function () {
+//         store = {}
+//       }
+//     }
+//   }
+// })
 
 // ===
 // Console handlers
