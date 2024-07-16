@@ -9,10 +9,17 @@ export default function (plop) {
         type: 'input',
         name: 'name',
         message: 'What is your component name?'
+      },
+      {
+        type: 'confirm',
+        name: 'isBase',
+        default: false,
+        message:
+          'Is this a base component? (Base components are globally registered, and also require Storybook stories and tests)'
       }
     ],
-    actions: () => {
-      const actions = [
+    actions: (data) => {
+      let actions = [
         {
           type: 'add',
           path: '../../src/components/{{properCase name}}.vue',
@@ -26,6 +33,17 @@ export default function (plop) {
           abortOnFail: true
         }
       ]
+
+      if (data.isBase) {
+        actions = actions.concat([
+          {
+            type: 'add',
+            path: '../../src/components/{{properCase name}}.stories.ts',
+            templateFile: './component.stories.ts.hbs',
+            abortOnFail: true
+          }
+        ])
+      }
 
       return actions
     }

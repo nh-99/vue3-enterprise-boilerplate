@@ -15,6 +15,11 @@ defineProps<{
         >Vue 3 Enterprise Boilerplate</a
       >. What's next?
     </h3>
+    <BaseButton
+      label="Learn Vue"
+      primary
+      @click="window.location.href = 'https://vuejs.org/guide/introduction.html'"
+    />
   </div>
 </template>
 
