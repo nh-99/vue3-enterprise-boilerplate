@@ -77,6 +77,22 @@ pnpm run generate:type
 
 Update existing or create new generators in the `_generators` folder, with help from the [plop docs](https://plopjs.com/documentation/#getting-started).
 
+## Storybook
+
+We use Storybook to document custom components for re-use by other developers on the project. You can access component documentation by running Storybook:
+
+```bash
+# Run the interactive Storybook browser app
+pnpm run storybook
+```
+
+You can build a static version of this documentation, i.e. for serving on an internal site, by running:
+
+```bash
+# Build the Storybook docs into a static app
+pnpm run build-storybook
+```
+
 ## Aliases
 
 To simplify referencing local modules and refactoring, you can set aliases to be shared between dev and unit tests in `vite.config.ts`. As a convention, this project uses an `@` prefix to denote aliases.
@@ -86,3 +102,5 @@ To simplify referencing local modules and refactoring, you can set aliases to be
 ### Base components
 
 [Base components](https://vuejs.org/v2/style-guide/#Base-component-names-strongly-recommended) (a.k.a. presentational, dumb, or pure components) that apply app-specific styling and conventions should all begin with the `_base-` prefix. Since these components are typically used in place of raw HTML element (and thus used as frequently), they're automatically globally registered for convenience. This means you don't have to import and locally register them to use them in templates.
+
+These components also require special documentation. We use the Storybook library to enable this functionality. Storybook allows you to document your UI components via stories, which can be created to outline common scenarios for using a component. For more about Storybook, please read here.

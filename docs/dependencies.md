@@ -61,3 +61,8 @@
 
 - **Description**: Vite is a fast development server and build tool for modern web applications. It leverages native ES modules for faster development and builds.
 - **Usage in Architecture**: Vite is the primary build tool for the project, providing efficient development and optimized production builds for the Vue 3 application.
+
+### 9. [storybook](https://storybook.js.org/docs)
+
+- **Description**: Storybook is a frontend workshop for building UI components and pages in isolation. Thousands of teams use it for UI development, testing, and documentation. It's open source and free.
+- **Usage in Architecture**: Storybook is used to enforce the documentation of base components. Since these predominantly are used to create a custom UI library for your application, it's required to make these on base components to ensure other developers can use the pattern you've created. These can also be used to document custom non-base components if desired or necessitated.
